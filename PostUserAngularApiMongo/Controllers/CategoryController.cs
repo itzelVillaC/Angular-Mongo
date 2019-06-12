@@ -21,7 +21,7 @@ namespace PostUserAngularApiMongo.Controllers
         [HttpGet]
         public ActionResult<List<Categorys>> GetCategorys()
         {
-            return _categoryService.GetCategorys();          
+            return _categoryService.GetCategorys();
         }
     }
 }
