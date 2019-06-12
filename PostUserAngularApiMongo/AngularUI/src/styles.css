@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+.center{
+    text-align: center;
+}
+
+#customBtn {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 190px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+  }
+  #customBtn:hover {
+    cursor: pointer;
+  }
+  span.label {
+    font-family: serif;
+    font-weight: normal;
+  }
+  span.icon {
+    background: url('/assets/iconGoogle.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+  }
+  span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  img.perfil{
+    border-radius: 50%;
+    height: 80px;;
+    vertical-align: middle;
+    border-style: none;
+  }
+  img.avatar{
+    border-radius: 50%;
+    height: 30px;;
+    vertical-align: middle;
+    border-style: none;
+  }
+
+  .img-size{
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.styleList{
+  background-color: cornflowerblue;
+}
+
+body{
+background-color: aliceblue;
+}

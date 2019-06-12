@@ -1,0 +1,14 @@
+<div class="container"><br>
+  <div class="card" *ngIf="postModel">
+    <div class="card-header">
+      <h2>{{postModel.title}}</h2>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title text-right">publish {{postModel.time|date:'short'}}</h6>
+      <img *ngIf="postModel.image" src="{{path}}/files/{{postModel.id}}" class="img-size" />
+      <p class="card-text">{{postModel.text}}</p>
+      <small class="text-muted">posted by {{postModel.user.email}}</small>
+      <br><br>
+      <a [routerLink]="['/ListPost', postModel.category]" class="btn btn-primary">Return to list </a>
+    </div>
+  </div>

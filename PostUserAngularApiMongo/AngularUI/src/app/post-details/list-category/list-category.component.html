@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>CATEGORY LIST</h1>
+    <ul *ngFor="let ls of listCategory" class="styleList">
+        <a [routerLink]="['/ListPost', ls.category]">
+            <li class="list-group-item" [id]="ls.id">{{ls.category}}</li>
+        </a>
+    </ul>
+</div>
+
+

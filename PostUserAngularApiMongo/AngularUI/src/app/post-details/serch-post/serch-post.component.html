@@ -1,0 +1,23 @@
+<div class="container"> <br>
+  <div class="row ">
+    <div class="col-md-12">
+      <div *ngIf="listPost?.length == 0" class="center">
+        <h2>Search results</h2>
+        No search results , please try again
+      </div>
+
+      <div class="list-group">
+        <div *ngFor="let ls of listPost">
+          <a [routerLink]="['/PostDetail',ls.id]"
+            class="list-group-item list-group-item-action flex-column align-items-start text-left">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1 text-primary">{{ls.title}}</h5>
+              <small class="text-muted">{{ls.time | date:'short'}}</small>
+            </div>
+            <small class="text-muted">posted by {{ls.user.email}}</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
