@@ -38,8 +38,8 @@ namespace DAL.Service
                 Time = DateTime.Now.ToString()
             };
             _advertisement.InsertOne(advertisement);
-            var idPost = advertisement.Id;
-            return idPost;
+            var advertisementId = advertisement.Id;
+            return advertisementId;
         }
         public List<Advertisement> AdvertisementByCategory(string category)
         {
