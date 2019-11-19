@@ -12,8 +12,6 @@ namespace Common
             Email = claims.First(c => c.Type == "email").Value;
             Name = claims.First(c => c.Type == "name").Value;
         }
-
-        
         public string Email { get; set; }
         public string Name { get; set; }
     }

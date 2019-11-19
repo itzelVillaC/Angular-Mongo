@@ -9,16 +9,16 @@ namespace DAL.Service
 {
     public class CategoryService
     {
-        private readonly IMongoCollection<Categorys> _category;
+        private readonly IMongoCollection<Categories> _category;
         public CategoryService(IConfiguration config)
         {
-            var client = new MongoClient(config.GetConnectionString("PostDB"));
-            var database = client.GetDatabase("PostDB");
-            _category = database.GetCollection<Categorys>("Category");
+            var client = new MongoClient(config.GetConnectionString("ClassifiedAdvertisingDB"));
+            var database = client.GetDatabase("ClassifiedAdvertisingDB");
+            _category = database.GetCollection<Categories>("Category");
         }
-        public List<Categorys> GetCategorys()
+        public List<Categories> GetCategories()
         {
-            return _category.Find(Post => true).ToList();
+            return _category.Find(c => true).ToList();
         }
     }
 }

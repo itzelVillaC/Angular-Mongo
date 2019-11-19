@@ -1,12 +1,10 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace DAL.Models
 {
-    public class Categorys
+    public class Categories
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

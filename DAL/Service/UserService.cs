@@ -13,8 +13,8 @@ namespace DAL.Service
         private readonly IMongoCollection<User> _user;
         public UserService(IConfiguration config)
         {
-            var client = new MongoClient(config.GetConnectionString("PostDB"));
-            var database = client.GetDatabase("PostDB");
+            var client = new MongoClient(config.GetConnectionString("ClassifiedAdvertisingDB"));
+            var database = client.GetDatabase("ClassifiedAdvertisingDB");
             _user = database.GetCollection<User>("User");
         }
         public User GetUserInfo(string email)
@@ -23,8 +23,9 @@ namespace DAL.Service
         }
         public void InsertUser(CurrentUser user)
         {
-            var exist = _user.Find(u => u.Email == user.Email).FirstOrDefault();
-            if (exist == null)
+            //check if user exits in the database
+            var userInformation = _user.Find(u => u.Email == user.Email).FirstOrDefault();
+            if (userInformation==null)
             {
                 var informationUser = new User
                 {

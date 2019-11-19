@@ -7,7 +7,7 @@ using DAL.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PostUserAngularApiMongo.Controllers
+namespace ClassifiedAdvertisementsWebsite.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,9 +19,9 @@ namespace PostUserAngularApiMongo.Controllers
             _categoryService = categoryService;
         }
         [HttpGet]
-        public ActionResult<List<Categorys>> GetCategorys()
+        public ActionResult<List<Categories>> GetCategories()
         {
-            return _categoryService.GetCategorys();
+            return _categoryService.GetCategories();
         }
     }
 }

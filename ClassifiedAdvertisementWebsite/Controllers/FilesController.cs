@@ -7,21 +7,21 @@ using DAL.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PostUserAngularApiMongo.Controllers
+namespace ClassifiedAdvertisementsWebsite.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class FilesController : ControllerBase
     {
-        readonly PostService _postService;
-        public FilesController(PostService postService)
+        readonly AdvertisementService _advertisementService;
+        public FilesController(AdvertisementService advertisementService)
         {
-            _postService = postService;
+            _advertisementService = advertisementService;
         }
         [HttpGet("{id}")]
         public ActionResult FilesP(string id)
         {
-           var data= _postService.PostById(id);
+           var data= _advertisementService.AdvertisementById(id);
             var file = System.IO.File.ReadAllBytes(data.Image);
             return File(file,"image/jpeg");
         }

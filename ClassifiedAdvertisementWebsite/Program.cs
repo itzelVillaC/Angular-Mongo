@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace PostUserAngularApiMongo
+namespace ClassifiedAdvertisementsWebsite
 {
     public class Program
     {

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostUserAngularApiMongo", "PostUserAngularApiMongo\PostUserAngularApiMongo.csproj", "{9A6FE67A-B283-4353-89E5-F3C80ADF38FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassifiedAdvertisementWebsite", "ClassifiedAdvertisementWebsite\ClassifiedAdvertisementWebsite.csproj", "{9A6FE67A-B283-4353-89E5-F3C80ADF38FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{876B104B-9607-4E1A-8DDE-45DAC870AA74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{876B104B-9607-4E1A-8DDE-45DAC870AA74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{4C64907C-EFB5-4091-BB7B-9DA4BE680FA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{4C64907C-EFB5-4091-BB7B-9DA4BE680FA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

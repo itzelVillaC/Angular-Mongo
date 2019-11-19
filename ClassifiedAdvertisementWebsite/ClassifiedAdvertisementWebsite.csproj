@@ -4,7 +4,19 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+    <RootNamespace>ClassifiedAdvertisementsWebsite</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AngularUI\**" />
+    <Compile Remove="ClassifiedAdvertisements_AngularUI\**" />
+    <Content Remove="AngularUI\**" />
+    <Content Remove="ClassifiedAdvertisements_AngularUI\**" />
+    <EmbeddedResource Remove="AngularUI\**" />
+    <EmbeddedResource Remove="ClassifiedAdvertisements_AngularUI\**" />
+    <None Remove="AngularUI\**" />
+    <None Remove="ClassifiedAdvertisements_AngularUI\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Hellang.Authentication.JwtBearer.Google" Version="1.2.3" />
@@ -22,7 +34,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AngularUI\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

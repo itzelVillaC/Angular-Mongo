@@ -8,7 +8,7 @@ using DAL.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PostUserAngularApiMongo.Controllers
+namespace ClassifiedAdvertisementsWebsite.Controllers
 {
 
     [Route("api/[controller]")]

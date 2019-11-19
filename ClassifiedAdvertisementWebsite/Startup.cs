@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace PostUserAngularApiMongo
+namespace ClassifiedAdvertisementsWebsite
 {
     public class Startup
     {
@@ -22,7 +22,7 @@ namespace PostUserAngularApiMongo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<PostService>();
+            services.AddScoped<AdvertisementService>();
             services.AddScoped<UserService>();
             services.AddScoped<CategoryService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

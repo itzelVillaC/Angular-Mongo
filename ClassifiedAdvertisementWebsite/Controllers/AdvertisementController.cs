@@ -13,39 +13,39 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PostUserAngularApiMongo.Controllers
+namespace ClassifiedAdvertisementsWebsite.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostsController : ControllerBase
+    public class AdvertisementController : ControllerBase
     {
-        private readonly PostService _postService;
+        private readonly AdvertisementService _advertisementService;
         private IHostingEnvironment _hostingEnvironment;
 
-        public PostsController(PostService postService, IHostingEnvironment hostingEnvironment)
+        public AdvertisementController(AdvertisementService advertisementService, IHostingEnvironment hostingEnvironment)
         {
-            _postService = postService;
+            _advertisementService = advertisementService;
             _hostingEnvironment = hostingEnvironment;
         }
 
         [HttpGet("{category}")]
-        public ActionResult<List<Post>> Get(string category)
+        public ActionResult<List<Advertisement>> GetAdvertisementByCategory(string category)
         {
-            return _postService.PostByCategory(category);
+            return _advertisementService.AdvertisementByCategory(category);
         }
 
         [HttpGet("id/{id}")]
-        public ActionResult<Post> GetById(string id)
+        public ActionResult<Advertisement> GetAdvertisementById(string id)
         {
-            return _postService.PostById(id);
+            return _advertisementService.AdvertisementById(id);
         }
 
         [Authorize]
         [HttpPost("data/")]
-        public ActionResult<object> InsertPost(Post post)
+        public ActionResult<object> InsertAdvertisement(Advertisement post)
         {
             CurrentUser user = new CurrentUser(User.Claims);
-            var idPost = _postService.InsertPost(post, user);
+            var idPost = _advertisementService.InsertAdvertisement(post, user);
             return idPost;
         }
 
@@ -82,9 +82,9 @@ namespace PostUserAngularApiMongo.Controllers
         }
 
         [HttpGet("search/{findText}")]
-        public ActionResult<List<Post>> PostBySearch(string findText)
+        public ActionResult<List<Advertisement>> AdvertisementBySearch(string findText)
         {
-            return _postService.PostBySearch(findText);
+            return _advertisementService.AdvertisementBySearch(findText);
         }
     }
 }

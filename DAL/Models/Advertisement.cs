@@ -1,12 +1,10 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace DAL.Models
 {
-    public class Post
+    public class Advertisement
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
