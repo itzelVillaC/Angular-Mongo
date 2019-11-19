@@ -14,7 +14,7 @@ namespace DAL.Service
         {
             var client = new MongoClient(config.GetConnectionString("ClassifiedAdvertisingDB"));
             var database = client.GetDatabase("ClassifiedAdvertisingDB");
-            _category = database.GetCollection<Categories>("Category");
+            _category = database.GetCollection<Categories>("Categories");
         }
         public List<Categories> GetCategories()
         {

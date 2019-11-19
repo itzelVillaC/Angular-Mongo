@@ -17,7 +17,7 @@ namespace DAL.Service
         {
             var client = new MongoClient(config.GetConnectionString("ClassifiedAdvertisingDB"));
             var database = client.GetDatabase("ClassifiedAdvertisingDB");
-            _advertisement = database.GetCollection<Advertisement>("Advertising");
+            _advertisement = database.GetCollection<Advertisement>("Advertisement");
             _user = database.GetCollection<User>("User");
         }
         public string InsertAdvertisement(Advertisement p, CurrentUser user)

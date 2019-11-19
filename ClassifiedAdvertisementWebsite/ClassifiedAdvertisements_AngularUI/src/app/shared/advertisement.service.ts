@@ -1,13 +1,13 @@
 import { Injectable, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { PostModel } from './post.model';
+import { AdvertisementModel } from './advertisement.model';
 import { UserService } from './user.service';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class PostService {
+export class AdvertisementService {
 
     public readonly rootUrl = 'http://localhost:54017/api';
     constructor(private http: HttpClient, private userService: UserService) { }
@@ -19,31 +19,31 @@ export class PostService {
         return headers;
     }
 
-    getListPostByCategory(category: string) {
-        return this.http.get(this.rootUrl + '/posts/' + category, {});
+    getListAdvertisementByCategory(category: string) {
+        return this.http.get(this.rootUrl + '/advertisement/' + category, {});
     }
-    getPostById(id: string) {
-        return this.http.get(this.rootUrl + "/posts/id/" + id)
-    }
-
-    postAdd(data: PostModel) {//
-        return this.http.post(this.rootUrl + '/posts/data/', data, { headers: this.createHeader(), responseType: 'text' });
+    getAdvertisementById(id: string) {
+        return this.http.get(this.rootUrl + "/advertisement/id/" + id)
     }
 
-    getListCategorys() {
+    advertisementAdd(data: AdvertisementModel) {//
+        return this.http.post(this.rootUrl + '/advertisement/data/', data, { headers: this.createHeader(), responseType: 'text' });
+    }
+
+    getListCategories() {
         return this.http.get(this.rootUrl + '/category');
     }
 
-    getListPostBySearch(search: string) {
-        return this.http.get(this.rootUrl + '/posts/search/' + search, {});
+    getListAdvertisementBySearch(search: string) {
+        return this.http.get(this.rootUrl + '/advertisement/search/' + search, {});
     }
 
     checkUserDB(check: number) {
         return this.http.post(this.rootUrl + '/user/', check, { headers: this.createHeader() });
     }
 
-    postImage(form) {
-        return this.http.post(this.rootUrl + '/posts/image/', form, { headers: this.createHeader(), responseType: 'text' });
+    advertisementImage(form) {
+        return this.http.post(this.rootUrl + '/advertisement/image/', form, { headers: this.createHeader(), responseType: 'text' });
     }
 
 }

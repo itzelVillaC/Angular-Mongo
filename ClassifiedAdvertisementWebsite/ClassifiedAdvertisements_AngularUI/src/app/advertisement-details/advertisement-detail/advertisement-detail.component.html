@@ -1,0 +1,14 @@
+<div class="container"><br>
+  <div class="card" *ngIf="advertisementModel">
+    <div class="card-header">
+      <h2>{{advertisementModel.title}}</h2>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title text-right">publish {{advertisementModel.time|date:'short'}}</h6>
+      <img *ngIf="advertisementModel.image" src="{{path}}/files/{{advertisementModel.id}}" class="img-size" />
+      <p class="card-text">{{advertisementModel.text}}</p>
+      <small class="text-muted">advertisemented by {{advertisementModel.user.email}}</small>
+      <br><br>
+      <a [routerLink]="['/ListAdvertisement', advertisementModel.category]" class="btn btn-primary">Return to list </a>
+    </div>
+  </div>

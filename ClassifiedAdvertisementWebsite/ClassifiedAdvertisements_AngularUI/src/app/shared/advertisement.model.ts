@@ -1,6 +1,6 @@
 import { UserModel } from './user.model';
 
-export class PostModel {
+export class AdvertisementModel {
     id: string;
     user: UserModel;
     title: string;

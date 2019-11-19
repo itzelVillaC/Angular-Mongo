@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"ClassifiedAdvertisingDB.User"}],"uuid":"392e70def1614323baab92bd8cf6c981"}

@@ -7,25 +7,25 @@ import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from '@angular/forms'
 import{ HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
-import { PostDetailsComponent } from './post-details/post-details.component';
-import { ListCategoryComponent } from './post-details/list-category/list-category.component';
-import { ListPostComponent } from './post-details/list-post/list-post.component';
-import { PostDetailComponent } from './post-details/post-detail/post-detail.component';
-import { AddPostComponent } from './post-details/add-post/add-post.component';
-import { PostService } from './shared/post.service';
-import { SerchPostComponent } from './post-details/serch-post/serch-post.component';
+import { AdvertisementDetailsComponent } from './advertisement-details/advertisement-details.component';
+import { ListCategoryComponent } from './advertisement-details/list-category/list-category.component';
+import { ListAdvertisementComponent } from './advertisement-details/list-advertisement/list-advertisement.component';
+import { AdvertisementDetailComponent } from './advertisement-details/advertisement-detail/advertisement-detail.component';
+import { AddAdvertisementComponent } from './advertisement-details/add-advertisement/add-advertisement.component';
+import { AdvertisementService } from './shared/advertisement.service';
+import { SerchAdvertisementComponent } from './advertisement-details/serch-advertisement/serch-advertisement.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostDetailsComponent,
+    AdvertisementDetailsComponent,
     ListCategoryComponent,
-    ListPostComponent,
-    PostDetailComponent,
-    AddPostComponent,
-    SerchPostComponent  
+    ListAdvertisementComponent,
+    AdvertisementDetailComponent,
+    AddAdvertisementComponent,
+    SerchAdvertisementComponent  
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,7 @@ import { SerchPostComponent } from './post-details/serch-post/serch-post.compone
     AppRoutingModule,
     SocialLoginModule
   ],
-  providers: [PostService,UserService,
+  providers: [AdvertisementService,UserService,
     {
       provide:AuthServiceConfig,
       useFactory:getAuthServiceConfigs

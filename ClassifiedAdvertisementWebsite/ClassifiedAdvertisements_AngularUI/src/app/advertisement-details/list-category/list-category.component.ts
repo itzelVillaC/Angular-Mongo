@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from 'src/app/shared/post.service';
+import { AdvertisementService } from 'src/app/shared/advertisement.service';
 import { CategoryModel } from 'src/app/shared/category.model';
 import { Router } from '@angular/router';
 
@@ -11,14 +11,14 @@ import { Router } from '@angular/router';
 export class ListCategoryComponent implements OnInit {
   listCategory: CategoryModel[];
 
-  constructor(private _service: PostService, private _router: Router) { }
+  constructor(private _service: AdvertisementService, private _router: Router) { }
 
   ngOnInit() {
-    this.loadCategorys();
+    this.loadCategories();
   }
 
-  loadCategorys() {
-    this._service.getListCategorys().subscribe((list: CategoryModel[]) => {
+  loadCategories() {
+    this._service.getListCategories().subscribe((list: CategoryModel[]) => {
       this.listCategory = list;
     });
   }

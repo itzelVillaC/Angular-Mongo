@@ -1,0 +1,7 @@
+Export DB
+Inside folder MongoBD>bin
+mongodump --db ClassifiedAdvertisingDB
+Import
+Paste ClassifiedAdvertisingDB Folder inside Dump Folder MongoBD>bin
+Run mongorestore or
+mongorestore --verbose \path\dump

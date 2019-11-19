@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddPostComponent } from './post-details/add-post/add-post.component'
-import { ListPostComponent } from './post-details/list-post/list-post.component'
-import { ListCategoryComponent } from './post-details/list-category/list-category.component'
-import { PostDetailComponent } from './post-details/post-detail/post-detail.component'
-import { SerchPostComponent } from './post-details/serch-post/serch-post.component'
+import { AddAdvertisementComponent } from './advertisement-details/add-advertisement/add-advertisement.component'
+import { ListAdvertisementComponent } from './advertisement-details/list-advertisement/list-advertisement.component'
+import { ListCategoryComponent } from './advertisement-details/list-category/list-category.component'
+import { AdvertisementDetailComponent } from './advertisement-details/advertisement-detail/advertisement-detail.component'
+import { SerchAdvertisementComponent } from './advertisement-details/serch-advertisement/serch-advertisement.component'
 
 const routes: Routes = [
   { path: 'ListCategory', component: ListCategoryComponent },
-  { path: 'ListPost/:category', component: ListPostComponent },
-  { path: 'PostDetail/:id', component: PostDetailComponent },
-  { path: 'PostSearch/:findText', component: SerchPostComponent },
-  { path: 'NewPost', component: AddPostComponent }
+  { path: 'ListAdvertisement/:category', component: ListAdvertisementComponent },
+  { path: 'AdvertisementDetail/:id', component: AdvertisementDetailComponent },
+  { path: 'AdvertisementSearch/:findText', component: SerchAdvertisementComponent },
+  { path: 'NewAdvertisement', component: AddAdvertisementComponent }
 ];
 
 @NgModule({

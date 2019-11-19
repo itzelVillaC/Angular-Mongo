@@ -31,7 +31,14 @@ namespace ClassifiedAdvertisementsWebsite.Controllers
             }
             return Ok();
         }
+        // GET: api/
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
 
-       
+
+
     }
 }

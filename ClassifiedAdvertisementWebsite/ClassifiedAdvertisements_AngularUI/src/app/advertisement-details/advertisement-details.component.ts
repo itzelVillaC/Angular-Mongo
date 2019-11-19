@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialUser, AuthService, GoogleLoginProvider } from 'angularx-social-login';
 import { UserService } from '../shared/user.service';
-import { PostService } from '../shared/post.service';
+import { AdvertisementService } from '../shared/advertisement.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-post-details',
-  templateUrl: './post-details.component.html',
+  selector: 'app-advertisement-details',
+  templateUrl: './advertisement-details.component.html',
   styleUrls: []
 })
-export class PostDetailsComponent implements OnInit {
+export class AdvertisementDetailsComponent implements OnInit {
   findText: string;
   private user: SocialUser;
-  constructor(private authService: AuthService, public userSerivce: UserService, private servicePost: PostService, private _router: Router, private route: ActivatedRoute) { }
+  constructor(private authService: AuthService, public userSerivce: UserService, private serviceAdvertisement: AdvertisementService, private _router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this._router.navigate(['/ListCategory']);
@@ -31,7 +31,7 @@ export class PostDetailsComponent implements OnInit {
         this.userSerivce.storeData(userInfo);
         this.userSerivce.userLoggedIn.emit(true);
         //check if user exist if not insert new one   
-        this.servicePost.checkUserDB(1).subscribe();
+        this.serviceAdvertisement.checkUserDB(1).subscribe();
       }
     });
   }
